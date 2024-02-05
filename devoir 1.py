@@ -4,12 +4,13 @@ import sympy as sy
 import matplotlib as plt    
 
 # Création des variables dans les fonctions
-t = sy.Symbol('t') # Le temps
-w = sy.Symbol('w') # Variable w (je ne sais pas comment la mettre...) (π/3,00 rad/s)
-vx0 = sy.Symbol('vx0') # Vitesse initiale
-x0 = sy.Symbol('x0') # Position initiale
-A = sy.Symbol('A') # Variable A 
-m = sy.Symbol('m') # Masse (0,100 kg)
+t = sy.Symbol('t', positive = True) # Le temps
+w = sy.Symbol('w', positive = True) # Variable w (je ne sais pas comment la mettre...) (π/3,00 rad/s)
+vx0 = sy.Symbol('vx0', positive = True) # Vitesse initiale
+x0 = sy.Symbol('x0', positive = True) # Position initiale
+A = sy.Symbol('A', positive = True) # Variable A 
+m = sy.Symbol('m', positive = True) # Masse (0,100 kg)
+
 
 # Fonction définissant l'accélération en fonction du temps (obtenue en divisant la fonction de force par m)
 ax = (A*t*sy.sin(w*t))/m
